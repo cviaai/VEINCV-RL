@@ -11,13 +11,28 @@ Segmentation pipeline featuring Frangi vesselness filter, attention U-Net and cl
 * Pytorch-Ignite
 * OpenAI Gym
 * Stable-baselines
-## Structure
+## Code structure 
+Server folder - main folder with experiment files
 * dataset_90 - 90 forearm snapshots and 90 corresponding masks, 75 of them for train, 15 for validation
-* architectures - all used convolutional neural network architectures for semantic segmentation task
-* main.py - full experiment description
-* VeinsDataset.py - preparing data
-* train.py - main training cycle
-* iou.py, miou.py, precision.py, recall.py, ssim.py - metrics
+* ignite_new - experiment
+  * architectures - all used convolutional neural network architectures for semantic segmentation task
+  * pretrained_models - here saved pre-trained models
+  * VeinsDataset.py - preparing data
+  * dice_helpers.py - helper function for dice
+  * inference.ipynb - Model Inference experiments (draft)
+  * iou.py - Intersection over Union metric
+  * loss.py - Loss functions (on the following: Binary Cross Entropy, Dice, clDice)
+  * main.py - full experiment: paths, parameters, model choice, etc.
+  * miou.py - mean Intersection over Union metric
+  * precision.py - Precision metric
+  * recall.py - Recall metric
+  * run.ipynb - run the experiment
+  * ssim.py - Structure Similarity Loss function
+  * train.py - main training cycle
+  * tversky_loss.py - Tversky loss
+  * utils.py - utils functions
+  * train.py - main training cycle
+* img_check - 1 random training sample to check; 4 snapshots in it - original snapshot, ground true mask, predicted image, predicted mask (binarized predicted image)
 ## Maintainers
 Aleksandr Rubashevskii (main contributor) @rubaha96
 
