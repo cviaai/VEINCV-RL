@@ -5,3 +5,7 @@ Peripheral Difficult Venous Access (PDVA) is a commonplace problem in clinical p
 ## Segmentation pipeline
 Segmentation pipeline featuring Frangi vesselness filter, attention U-Net and clDICE loss.
 ![Segmentation pipeline](https://github.com/cviaai/NIR-VISIBLE-IMAGING-WITH-CNN-RL/blob/master/img/Segmentation_pipeline.png)
+## Maintainers
+Aleksandr Rubashevskii (main contributor) @rubaha96
+Vito Michele Leli @vitomichele
+Oleg Rogov @olegrgv
