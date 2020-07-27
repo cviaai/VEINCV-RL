@@ -5,6 +5,19 @@ Peripheral Difficult Venous Access (PDVA) is a commonplace problem in clinical p
 ## Segmentation pipeline
 Segmentation pipeline featuring Frangi vesselness filter, attention U-Net and clDICE loss.
 ![Segmentation pipeline](https://github.com/cviaai/NIR-VISIBLE-IMAGING-WITH-CNN-RL/blob/master/img/Segmentation_pipeline.png)
+## Requirements
+* Python 3.7
+* Pytorch
+* Pytorch-Ignite
+* OpenAI Gym
+* Stable-baselines
+## Structure
+* dataset_90 - 90 forearm snapshots and 90 corresponding masks, 75 of them for train, 15 for validation
+* architectures - all used convolutional neural network architectures for semantic segmentation task
+* main.py - full experiment description
+* VeinsDataset.py - preparing data
+* train.py - main training cycle
+* iou.py, miou.py, precision.py, recall.py, ssim.py - metrics
 ## Maintainers
 Aleksandr Rubashevskii (main contributor) @rubaha96
 
