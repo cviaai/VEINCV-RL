@@ -7,5 +7,7 @@ Segmentation pipeline featuring Frangi vesselness filter, attention U-Net and cl
 ![Segmentation pipeline](https://github.com/cviaai/NIR-VISIBLE-IMAGING-WITH-CNN-RL/blob/master/img/Segmentation_pipeline.png)
 ## Maintainers
 Aleksandr Rubashevskii (main contributor) @rubaha96
+
 Vito Michele Leli @vitomichele
+
 Oleg Rogov @olegrgv
