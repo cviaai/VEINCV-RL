@@ -52,6 +52,20 @@ Server folder - main folder with experiment files
   * utils.py - utils functions
   * train.py - main training cycle
 * img_check - 1 random training sample to check; 4 snapshots in it - original snapshot, ground true mask, predicted image, predicted mask (binarized predicted image)
+
+## Citing
+If you use this package in your publications or in other work, please cite it as follows:
+```
+@misc{rubashevskii2020nir,
+    title={Near-Infrared-to-Visible Vein Imaging via Convolutional Neural Networks and Reinforcement  Learning},
+    author={Aleksandr Rubashevskii and Vito M. Leli and Aleksandr Sarachakov and Oleg Y. Rogov and Dmitry V. Dylov},
+    year={2020},
+    eprint={...},
+    archivePrefix={arXiv},
+    primaryClass={eess.IV}
+}
+```
+
 ## Maintainers
 Aleksandr Rubashevskii (main contributor) @rubaha96
 
