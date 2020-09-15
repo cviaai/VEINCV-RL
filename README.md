@@ -23,6 +23,13 @@ Segmentation pipeline featuring Frangi vesselness filter, attention U-Net and cl
 * Pytorch-Ignite
 * OpenAI Gym
 * Stable-baselines
+
+To install requirements:
+
+```setup
+pip install -r requirements.txt
+```
+
 ## Code structure 
 Server folder - main folder with experiment files
 * dataset_90 - 90 forearm snapshots and 90 corresponding masks, 75 of them for train, 15 for validation
