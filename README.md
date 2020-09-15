@@ -5,12 +5,18 @@ Peripheral Difficult Venous Access (PDVA) is a commonplace problem in clinical p
 
 </p>
 <p align="center">
-<em> Experimental setup </em><br>
+<em> Fig. 1. Experimental setup </em><br>
 </p>
 
 ## Segmentation pipeline
 Segmentation pipeline featuring Frangi vesselness filter, attention U-Net and clDICE loss.
 ![Segmentation pipeline](https://github.com/cviaai/NIR-VISIBLE-IMAGING-WITH-CNN-RL/blob/master/img/Segmentation_pipeline.png)
+
+</p>
+<p align="center">
+<em> Fig. 2. Segmentation pipeline featuring Frangi vesselness filter, attention U-Net and clDICE loss </em><br>
+</p>
+
 ## Requirements
 * Python 3.7
 * Pytorch
