@@ -2,7 +2,7 @@
 
 # VeinCV
 ## Motivation
-This repository is an official PyTorch implementation of the paper "Near-Infrared-to-Visible Vein Imaging via Convolutional Neural Networks and Reinforcement  Learning" (...). Here we solve Peripheral Difficult Venous Access (PDVA) problem through the pipeline of NIR imaging, CNNs and RL.
+This repository is an official PyTorch implementation of the paper "Near-Infrared-to-Visible Vein Imaging via Convolutional Neural Networks and Reinforcement  Learning" (2020). Here we solve Peripheral Difficult Venous Access (PDVA) problem through the pipeline of NIR imaging, CNNs and RL.
 ![Experimental setup scheme](https://github.com/cviaai/NIR-VISIBLE-IMAGING-WITH-CNN-RL/blob/master/img/Experimental_setup_scheme.png)
 
 </p>
