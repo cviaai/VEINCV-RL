@@ -29,7 +29,7 @@ pip install -r requirements.txt
 ```
 
 ## Data
-Dataset contains 90 manually collected and annotated NIR images of forearms (LINK/FOLDER). Annotation was done with Frangi vesselness filter and ["Computer Vision Annotation Tool (CVAT)"] (https://github.com/openvinotoolkit/cvat).
+Dataset contains 90 manually collected and annotated NIR images of forearms (LINK/FOLDER). Annotation was done with Frangi vesselness filter and Computer Vision Annotation Tool (CVAT)(https://github.com/openvinotoolkit/cvat).
 
 ## Training
 
@@ -53,7 +53,6 @@ Folder "server" - main folder with experiment files
 * dataset_90 - 90 forearm snapshots and 90 corresponding masks, 75 of them for train, 15 for validation
 * ignite_new - segmentation and alignment experiments
 * img_check - 1 random training sample to check; 4 snapshots in it - original snapshot, ground true mask, predicted image, predicted mask (binarized predicted image)
-[UPDATE WITH RL FILES]
 ```
 .
 ├───dataset_90
