@@ -50,15 +50,18 @@ python eval.py --config <path_to_config_file>
 
 ## Code structure 
 Folder "server" - main folder with experiment files
+* dataset_90 - 90 forearm snapshots and 90 corresponding masks, 75 of them for train, 15 for validation
+* ignite_new - segmentation and alignment experiments
+* img_check - 1 random training sample to check; 4 snapshots in it - original snapshot, ground true mask, predicted image, predicted mask (binarized predicted image)
 [UPDATE WITH RL FILES]
-
-Option 1.
-
 ```
 .
 ├───dataset_90
 ├───ignite_new
 │   ├───architectures
+│   │   ├───attention_unet_architectures.py
+│   │   ├───base_unet_architecture.py
+│   │   └───encoders_unet_architectures.py
 │   ├───pretrained_models
 │   ├───VeinsDataset.py
 │   ├───dice_helpers.py
@@ -75,28 +78,6 @@ Option 1.
 │   └───utils.py
 └───img_check
 ```
-
-Option 2.
-
-* dataset_90 - 90 forearm snapshots and 90 corresponding masks, 75 of them for train, 15 for validation
-* ignite_new - experiment
-  * architectures - all used convolutional neural network architectures for semantic segmentation task
-  * pretrained_models - here saved pre-trained models
-  * VeinsDataset.py - preparing data
-  * dice_helpers.py - helper function for dice
-  * inference.ipynb - Model Inference experiments (draft)
-  * iou.py - Intersection over Union metric
-  * loss.py - Loss functions (on the following: Binary Cross Entropy, Dice, clDice)
-  * main.py - full experiment: paths, parameters, model choice, etc.
-  * miou.py - mean Intersection over Union metric
-  * precision.py - Precision metric
-  * recall.py - Recall metric
-  * run.ipynb - run the experiment
-  * ssim.py - Structure Similarity Loss function
-  * train.py - main training cycle
-  * tversky_loss.py - Tversky loss
-  * utils.py - utils functions
-* img_check - 1 random training sample to check; 4 snapshots in it - original snapshot, ground true mask, predicted image, predicted mask (binarized predicted image)
 
 ## Citing
 If you use this package in your publications or in other work, please cite it as follows:
