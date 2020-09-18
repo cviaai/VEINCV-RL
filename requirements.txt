@@ -1,0 +1,8 @@
+numpy==1.18.5
+Pillow==7.0.0
+torch==1.6.0+cu101
+torchvision==0.7.0+cu101
+gpytorch==1.2.0
+pytorch-ignite==0.4.1
+ax-platform==0.1.9
+segmentation-models-pytorch==0.1.0
