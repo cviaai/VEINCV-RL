@@ -20,12 +20,6 @@ Segmentation pipeline featuring Frangi vesselness filter, attention U-Net and cl
 </p>
 
 ## Requirements
-* Python 3.7
-* Pytorch
-* Pytorch-Ignite
-* OpenAI Gym
-* Stable-baselines
-
 To install requirements:
 
 ```setup
