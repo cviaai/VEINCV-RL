@@ -51,7 +51,35 @@ python eval.py --config <path_to_config_file>
 ---Will be edited--- 
 
 ## Code structure 
-Server folder - main folder with experiment files
+Folder "server" - main folder with experiment files
+[UPDATE WITH RL FILES]
+
+Option 1.
+
+```
+.
+├───dataset_90
+├───ignite_new
+│   ├───architectures
+│   ├───pretrained_models
+│   ├───VeinsDataset.py
+│   ├───dice_helpers.py
+│   ├───inference.ipynb
+│   ├───iou.py
+│   ├───loss.py
+│   ├───main.py
+│   ├───miou.py
+│   ├───precision.py
+│   ├───recall.py
+│   ├───ssim.py
+│   ├───train.py
+│   ├───tversky_loss.py
+│   └───utils.py
+└───img_check
+```
+
+Option 2.
+
 * dataset_90 - 90 forearm snapshots and 90 corresponding masks, 75 of them for train, 15 for validation
 * ignite_new - experiment
   * architectures - all used convolutional neural network architectures for semantic segmentation task
@@ -70,7 +98,6 @@ Server folder - main folder with experiment files
   * train.py - main training cycle
   * tversky_loss.py - Tversky loss
   * utils.py - utils functions
-  * train.py - main training cycle
 * img_check - 1 random training sample to check; 4 snapshots in it - original snapshot, ground true mask, predicted image, predicted mask (binarized predicted image)
 
 ## Citing
