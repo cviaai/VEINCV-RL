@@ -31,9 +31,8 @@ pip install -r requirements.txt
 To train the models used in the paper, run this command:
 
 ```train
-python train.py --config <path_to_config_file>
+python main.py
 ```
----Will be edited--- 
 
 ## Evaluation
 
