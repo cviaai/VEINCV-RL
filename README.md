@@ -1,6 +1,6 @@
 [![Python](https://img.shields.io/badge/python-3.6-blue.svg)](https://python.org)
 
-# VeinCV
+# NIR-VISIBLE-IMAGING-WITH-CNN-RL
 ## Motivation
 This repository is an official PyTorch implementation of the paper "Near-Infrared-to-Visible Vein Imaging via Convolutional Neural Networks and Reinforcement  Learning" (2020). 
 
