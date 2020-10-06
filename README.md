@@ -39,15 +39,6 @@ To train the models used in the paper, run this command:
 python main.py
 ```
 
-## Evaluation
-
-To evaluate models, run:
-
-```eval
-python eval.py --config <path_to_config_file>
-```
----Will be edited--- 
-
 ## Code structure 
 Folder "server" - main folder with experiment files
 * dataset_90 - 90 forearm snapshots and 90 corresponding masks, 75 of them for train, 15 for validation
