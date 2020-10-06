@@ -74,13 +74,13 @@ Folder "server" - main folder with experiment files
 ## Citing
 If you use this package in your publications or in other work, please cite it as follows:
 ```
-@misc{rubashevskii2020nir,
-    title={Near-Infrared-to-Visible Vein Imaging via Convolutional Neural Networks and Reinforcement  Learning},
-    author={Aleksandr Rubashevskii and Vito M. Leli and Aleksandr Sarachakov and Oleg Y. Rogov and Dmitry V. Dylov},
-    year={2020},
-    eprint={...},
-    archivePrefix={arXiv},
-    primaryClass={eess.IV}
+@inproceedings{VeinCV2020,
+  author={Aleksandr Rubashevskii and Vito M. Leli and Aleksandr Sarachakov and Oleg Y. Rogov and Dmitry V. Dylov},
+  title     = {Near-Infrared-to-Visible Vein Imaging via Convolutional Neural Networks and Reinforcement Learning},
+  booktitle = {16th International Conference on Control, Automation, Robotics and
+               Vision, {ICARCV} 2020, Shenzhen, China, December 13-15},
+  publisher = {{IEEE}},
+  year      = {2020},
 }
 ```
 
