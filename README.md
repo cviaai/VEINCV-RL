@@ -85,7 +85,7 @@ If you use this package in your publications or in other work, please cite it as
 ```
 
 ## Maintainers
-Aleksandr Rubashevskii (main contributor) @rubaha96
+Aleksandr Rubashevskii @rubaha96
 
 Vito Michele Leli @vitomichele
 
