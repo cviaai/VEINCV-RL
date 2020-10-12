@@ -31,7 +31,7 @@ pip install -r requirements.txt
 ```
 
 ## Data
-Dataset contains 90 manually collected and annotated NIR images of forearms. Annotation was done with Frangi vesselness filter and Computer Vision Annotation Tool [CVAT](https://github.com/openvinotoolkit/cvat).
+Dataset contains 90 manually collected and annotated NIR images of forearms. Annotation was done with Frangi vesselness filter and [Computer Vision Annotation Tool (CVAT)](https://github.com/openvinotoolkit/cvat).
 
 ## Training
 
