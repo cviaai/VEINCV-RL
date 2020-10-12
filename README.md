@@ -85,8 +85,8 @@ If you use this package in your publications or in other work, please cite it as
 ```
 
 ## Maintainers
-Aleksandr Rubashevskii @rubaha96
+[Aleksandr Rubashevskii](https://github.com/rubaha96)
 
-Vito Michele Leli @vitomichele
+[Vito Michele Leli](https://github.com/vitomichele)
 
-Oleg Rogov @olegrgv
+[Oleg Rogov](https://github.com/olegrgv)
