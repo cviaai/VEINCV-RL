@@ -1,8 +1,10 @@
 [![Python](https://img.shields.io/badge/python-3.6-blue.svg)](https://python.org)
 
 # Near-Infrared-to-Visible Vein Imaging via Convolutional Neural Networks and Reinforcement Learning
+
+This repository is an official PyTorch implementation of the paper "Near-Infrared-to-Visible Vein Imaging via Convolutional Neural Networks and Reinforcement  Learning", accepted to the the 16th International Conference on Control, Automation, Robotics and Vision (IEEE ICARCV), 2020. 
+
 ## Motivation
-This repository is an official PyTorch implementation of the paper "Near-Infrared-to-Visible Vein Imaging via Convolutional Neural Networks and Reinforcement  Learning" (2020). 
 
 Peripheral Difficult Venous Access (PDVA) is a commonplace problem in clinical practice which results in repetitive punctures, damaged veins, and significant discomfort to the patients. Nowadays, the poor visibility of subcutaneous vasculature in the visible part of the light spectrum is overcome by near-infrared (NIR) imaging and a returned projection of the recognized vasculature back to the arm of the patient. Here we introduce a closed-loop hardware system that optimizes cross-talk between the virtual mask generated from the NIR measurement and the projected augmenting image through CNNs and RL.
 
