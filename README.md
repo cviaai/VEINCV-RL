@@ -23,6 +23,13 @@ Peripheral Difficult Venous Access (PDVA) is a commonplace problem in clinical p
 <em> Fig. 2. Segmentation pipeline featuring Frangi vesselness filter, attention U-Net and clDICE loss </em><br>
 </p>
 
+## Installation as a project repository:
+
+```
+git clone https://github.com/cviaai/NIR-VISIBLE-IMAGING-WITH-CNN-RL.git
+```
+In this case, you need to manually install the dependencies.
+
 ## Requirements
 To install requirements:
 
