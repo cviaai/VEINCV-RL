@@ -43,7 +43,7 @@ python main.py
 ### Loss function
 Please specify any custom metrics you use:
 
-<img src="https://render.githubusercontent.com/render/math?math=\operatorname{L_{clDice}(p, \hat{p})} = 1 -  \operatorname{2 \times \dfrac{T_{prec}(\hat{s}, p) \times T_{sens}(s, \hat{p})}{T_{prec}(\hat{s}, p) + T_{sens}(s, \hat{p})}}">
+<img src="https://render.githubusercontent.com/render/math?math=L_{clDice}">
 
 And how:
 ```python
