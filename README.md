@@ -13,7 +13,7 @@ Experimental setup            |  RL image adjustment (example)
 <img src="https://github.com/cviaai/NIR-VISIBLE-IMAGING-WITH-CNN-RL/blob/master/img/Experimental_setup_scheme.png" width="600"></img> | <img src="https://github.com/cviaai/NIR-VISIBLE-IMAGING-WITH-CNN-RL/blob/master/img/example.gif" width="600"></img>
 
 ## Segmentation pipeline
-![Segmentation pipeline](https://github.com/cviaai/NIR-VISIBLE-IMAGING-WITH-CNN-RL/blob/master/img/pipeline.PNG)
+![Segmentation pipeline](https://github.com/cviaai/NIR-VISIBLE-IMAGING-WITH-CNN-RL/blob/master/img/Segmentation_pipeline.png)
 
 </p>
 <p align="center">
