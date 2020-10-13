@@ -41,10 +41,10 @@ To train the models used in the paper, run this command:
 python main.py
 ```
 ### clDICE loss 
-![formula](https://render.githubusercontent.com/render/math?math=L_{clDice}(p, \hat{p})} = 1 - {2 \times \dfrac{T_{prec}(\hat{s}, p) \times T_{sens}(s, \hat{p})}{T_{prec}(\hat{s}, p)%2BT_{sens}(s, \hat{p})}})
 
+![loss](https://github.com/cviaai/NIR-VISIBLE-IMAGING-WITH-CNN-RL/blob/master/img/cldice.gif)
 
-And how:
+called in ```loss.py```:
 ```python
 soft_cldice_loss(y_pred, y, target_skeleton=None)
 ```
