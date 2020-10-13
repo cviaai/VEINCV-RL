@@ -46,10 +46,10 @@ python main.py
 ```
 
 ## Code structure 
-Folder "server" - main folder with experiment files
-* dataset_90 - 90 forearm snapshots and 90 corresponding masks, 75 of them for train, 15 for validation
-* ignite_new - segmentation and alignment experiments
-* img_check - 1 random training sample to check; 4 snapshots in it - original snapshot, ground true mask, predicted image, predicted mask (binarized predicted image)
+Folder ```/server``` - main folder with experiment files
+* ```/dataset_90``` - 90 forearm snapshots and 90 corresponding masks, 75 of them for train, 15 for validation
+* ```/ignite_new``` - segmentation and alignment experiments
+* ```/img_check``` - 1 random training sample to check; 4 snapshots in it - original snapshot, ground true mask, predicted image, predicted mask (binarized predicted image)
 ```
 .
 ├───dataset_90
