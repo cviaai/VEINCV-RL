@@ -8,14 +8,10 @@ This repository is an official PyTorch implementation of the paper "Near-Infrare
 
 Peripheral Difficult Venous Access (PDVA) is a commonplace problem in clinical practice which results in repetitive punctures, damaged veins, and significant discomfort to the patients. Nowadays, the poor visibility of subcutaneous vasculature in the visible part of the light spectrum is overcome by near-infrared (NIR) imaging and a returned projection of the recognized vasculature back to the arm of the patient. Here we introduce a closed-loop hardware system that optimizes cross-talk between the virtual mask generated from the NIR measurement and the projected augmenting image through CNNs and RL.
 
-<p align="center">
-<img src="https://github.com/cviaai/NIR-VISIBLE-IMAGING-WITH-CNN-RL/blob/master/img/Experimental_setup_scheme.png" width="600">
-</p>
+Experimental setup             |  RL image adjustment 
+:-------------------------:|:-------------------------:
+![](https://github.com/cviaai/NIR-VISIBLE-IMAGING-WITH-CNN-RL/blob/master/img/Experimental_setup_scheme.png)  |  ![](https://github.com/cviaai/NIR-VISIBLE-IMAGING-WITH-CNN-RL/blob/master/img/example.gif)
 
-</p>
-<p align="center">
-<em> Fig. 1. Experimental setup </em><br>
-</p>
 
 ## Segmentation pipeline
 ![Segmentation pipeline](https://github.com/cviaai/NIR-VISIBLE-IMAGING-WITH-CNN-RL/blob/master/img/pipeline.PNG)
