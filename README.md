@@ -16,7 +16,7 @@ Peripheral Difficult Venous Access (PDVA) is a commonplace problem in clinical p
 </p>
 
 ## Segmentation pipeline
-![Segmentation pipeline](https://github.com/cviaai/NIR-VISIBLE-IMAGING-WITH-CNN-RL/blob/master/img/pipeline.png)
+![Segmentation pipeline](https://github.com/cviaai/NIR-VISIBLE-IMAGING-WITH-CNN-RL/blob/master/img/pipeline.PNG)
 
 </p>
 <p align="center">
