@@ -1,6 +1,6 @@
 [![Python](https://img.shields.io/badge/python-3.6-blue.svg)](https://python.org)
 
-# NIR-VISIBLE-IMAGING-WITH-CNN-RL
+# Near-Infrared-to-Visible Vein Imaging via Convolutional Neural Networks and Reinforcement Learning
 ## Motivation
 This repository is an official PyTorch implementation of the paper "Near-Infrared-to-Visible Vein Imaging via Convolutional Neural Networks and Reinforcement  Learning" (2020). 
 
@@ -26,7 +26,7 @@ Peripheral Difficult Venous Access (PDVA) is a commonplace problem in clinical p
 ## Installation as a project repository:
 
 ```
-git clone https://github.com/cviaai/NIR-VISIBLE-IMAGING-WITH-CNN-RL.git
+git clone https://github.com/cviaai/VEINCV-RL.git
 ```
 In this case, you need to manually install the dependencies.
 
@@ -49,7 +49,7 @@ python main.py
 ```
 ### clDICE loss 
 
-![loss](https://github.com/cviaai/NIR-VISIBLE-IMAGING-WITH-CNN-RL/blob/master/img/cldice.gif)
+![loss](https://github.com/cviaai/VEINCV-RL/blob/master/img/cldice.gif)
 
 called in ```loss.py```:
 ```python
@@ -89,7 +89,7 @@ Folder "server" - main folder with experiment files
 ## Citing
 If you use this package in your publications or in other work, please cite it as follows:
 ```
-@inproceedings{VeinCV2020,
+@inproceedings{VeinCV_RL,
   author={Aleksandr Rubashevskii and Vito M. Leli and Aleksandr Sarachakov and Oleg Y. Rogov and Dmitry V. Dylov},
   title     = {Near-Infrared-to-Visible Vein Imaging via Convolutional Neural Networks and Reinforcement Learning},
   booktitle = {16th International Conference on Control, Automation, Robotics and
