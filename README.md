@@ -40,6 +40,22 @@ To train the models used in the paper, run this command:
 ```train
 python main.py
 ```
+### Loss function
+Please specify any custom metrics you use:
+
+<img src="https://render.githubusercontent.com/render/math?math=\operatorname{L_{clDice}(p, \hat{p})} = 1 -  \operatorname{2 \times \dfrac{T_{prec}(\hat{s}, p) \times T_{sens}(s, \hat{p})}{T_{prec}(\hat{s}, p) + T_{sens}(s, \hat{p})}}">
+
+And how:
+```python
+def tversky_loss(beta):
+  def loss(y_true, y_pred):
+    numerator = tf.reduce_sum(y_true * y_pred, axis=-1)
+    denominator = y_true * y_pred + beta * (1 - y_true) * y_pred + (1 - beta) * y_true * (1 - y_pred)
+
+    return 1 - (numerator + 1) / (tf.reduce_sum(denominator, axis=-1) + 1)
+
+  return loss
+```
 
 ## Code structure 
 Folder "server" - main folder with experiment files
