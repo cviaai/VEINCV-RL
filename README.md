@@ -41,7 +41,8 @@ To train the models used in the paper, run this command:
 python main.py
 ```
 ### clDICE loss 
-<img src="https://render.githubusercontent.com/render/math?math=L_{clDice}(p, \hat{p})} = 1 - {2 \times \dfrac{T_{prec}(\hat{s}, p) \times T_{sens}(s, \hat{p})}{T_{prec}(\hat{s}, p) %2B T_{sens}(s, \hat{p})}}">
+![formula](https://render.githubusercontent.com/render/math?math=L_{clDice}(p, \hat{p})} = 1 - {2 \times \dfrac{T_{prec}(\hat{s}, p) \times T_{sens}(s, \hat{p})}{T_{prec}(\hat{s}, p)%2BT_{sens}(s, \hat{p})}})
+
 
 And how:
 ```python
