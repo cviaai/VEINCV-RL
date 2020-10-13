@@ -41,16 +41,8 @@ Dataset contains 90 manually collected and annotated NIR images of forearms. Ann
 
 To train the models used in the paper, run this command:
 
-```train
-python main.py
-```
-### clDICE loss 
-
-![loss](https://github.com/cviaai/VEINCV-RL/blob/master/img/cldice.gif)
-
-called in ```loss.py```:
 ```python
-soft_cldice_loss(y_pred, y, target_skeleton=None)
+python main.py
 ```
 
 ## Code structure 
