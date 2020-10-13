@@ -2,7 +2,7 @@
 
 # Near-Infrared-to-Visible Vein Imaging via Convolutional Neural Networks and Reinforcement Learning
 
-This repository is an official PyTorch implementation of the paper "Near-Infrared-to-Visible Vein Imaging via Convolutional Neural Networks and Reinforcement  Learning", accepted to the the 16th International Conference on Control, Automation, Robotics and Vision (IEEE ICARCV), 2020. 
+This repository is an official PyTorch implementation of the paper "Near-Infrared-to-Visible Vein Imaging via Convolutional Neural Networks and Reinforcement  Learning", accepted to the 16th International Conference on Control, Automation, Robotics and Vision, ICARCV 2020, Shenzhen, China, December 13-15, 2020.
 
 ## Motivation
 
