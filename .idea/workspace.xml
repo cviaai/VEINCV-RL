@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7852d150-c14a-43e1-bb34-660303c32ae8" name="Default Changelist" comment="merg">
-      <change afterPath="$PROJECT_DIR$/server/ignite_new/RL.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/ignite_new/unit_test/test_RL.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -130,6 +129,7 @@
       <workItem from="1600437747565" duration="3458000" />
       <workItem from="1601879989190" duration="3692000" />
       <workItem from="1601893996260" duration="11235000" />
+      <workItem from="1602579179929" duration="6654000" />
     </task>
     <task id="LOCAL-00001" summary="Tracking.py added for image alignment&#10;Created folder for unittest &#10;Created test for tracking.py">
       <created>1600263392944</created>
