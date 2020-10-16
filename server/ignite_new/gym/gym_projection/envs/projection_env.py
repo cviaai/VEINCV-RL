@@ -1,10 +1,8 @@
 import numpy as np
 import math
 import cv2
-# %matplotlib inline
 import matplotlib.pyplot as plt
 import time
-# from IPython.display import clear_output
 import numpy.ma as ma
 
 import gym
@@ -59,25 +57,6 @@ def analyze_image(image, mask):
 
     align = np.round(mx.std(ddof=1) / mx.mean(), 4)
     return align
-
-
-# from mask create a red mask over white background 
-def mask_red(mask):
-    target_0 = mask.copy()
-    vett = np.array(np.nonzero(target_0))
-    roi = [vett[0].min(), vett[0].max(), vett[1].min(), vett[1].max()]
-    cut = target_0[roi[0]:roi[1], roi[2]:roi[3]]
-    ret = np.zeros((cut.shape[0], cut.shape[1], 3), dtype=np.uint8)
-    ret.fill(255)
-
-    if (cut[:, :].shape[2] == 1):
-        ret[..., 2] -= cut[:, :]
-        ret[..., 1] -= cut[:, :]
-    else:
-        ret[..., 2] -= cut[:, :, 2]
-        ret[..., 1] -= cut[:, :, 2]
-
-    return ret
 
 
 def mask_red(mask):
@@ -156,23 +135,22 @@ def sim_projection(image, mask, rows, cols, angle, scale=1.0):
         merge: image, (int n*m*c) image with mask transformed and merged onto
     """
     merge = image.copy()
-    projection = mask.copy()
 
     rows = int(rows)
     cols = int(cols)
 
     # rotation
-    rotated = rotate_scale(projection, angle, scale)
+    rotated = rotate_scale(mask, angle, scale)
 
     ### for recalculation of vertices of bounding box
-    delta_r = int((rotated.shape[0] - proj_mask.shape[0]) / 2)
-    delta_c = int((rotated.shape[1] - proj_mask.shape[1]) / 2)
+    center_r = int((rotated.shape[0] - mask.shape[0]) / 2)
+    center_c = int((rotated.shape[1] - mask.shape[1]) / 2)
 
     # coordinates where to position the transformed mask
-    prj_crds = [rows - delta_r, rows - delta_r + rotated.shape[0], cols - delta_c, cols - delta_c + rotated.shape[1]]
+    prj_crds = [rows - center_r, rows - center_r + rotated.shape[0], cols - center_c, cols - center_c + rotated.shape[1]]
 
     # merge the 2 images
-    img_overlap = cv2.addWeighted(img[prj_crds[0]:prj_crds[1], prj_crds[2]:prj_crds[3]], 0.8, rotated, 0.5, 0)
+    img_overlap = cv2.addWeighted(merge[prj_crds[0]:prj_crds[1], prj_crds[2]:prj_crds[3]], 0.8, rotated, 0.5, 0)
     merge[prj_crds[0]:prj_crds[1], prj_crds[2]:prj_crds[3]] = img_overlap
 
     # return
@@ -222,22 +200,12 @@ class ProjectionEnv(gym.Env):
         self.mask_cols = self.mask_prj.shape[1]
 
         ### maximum displacement (for shifting)
-        self.nrows = 51
-        self.ncols = 51
+        self.rows = 51
+        self.cols = 51
 
         self.max_rot = 10
         self.max_scale = 0.10
 
-        # agent relative positions start, initial state of projection
-        ### it is affine transformed already by these parameters (would like to reach it)
-        ### just for start, then it will be randomized
-        self.rel_row = int(self.nrows / 2)
-        self.rel_col = int(self.cols / 2)
-        self.rel_rot = 0
-        self.rel_scale = 1
-
-        # Initialize the agent relative pos ###(rel = relative)
-        self.agent_rel_pos = np.array([self.rel_row, self.rel_col])
 
         # target real position (later remove and check with std/mean)
         ### real one for now
@@ -254,7 +222,6 @@ class ProjectionEnv(gym.Env):
         self.agent_real_row = self.target_real_row - self.target_row
         self.agent_real_col = self.target_real_col - self.target_col
 
-        self.agent_real_pos = np.array([self.agent_real_row, self.agent_real_col, self.rel_rot, self.rel_scale])
 
         # Define action and observation space
         # They must be gym.spaces objects
@@ -266,7 +233,7 @@ class ProjectionEnv(gym.Env):
         ### coordinates where actualy it on grid
         self.low_state = np.array([0, 0, -self.max_rot, 1 - self.max_scale, 0],
                                   dtype=np.float32)  ### not less than 0 - can be fixed
-        self.high_state = np.array([self.nrows, self.ncols, self.max_rot, 1 + self.max_scale, 1],
+        self.high_state = np.array([self.rows, self.cols, self.max_rot, 1 + self.max_scale, 1],
                                    dtype=np.float32)  ### for our case may be fine, but need to chack for value "1"
         self.observation_space = spaces.Box(low=self.low_state, high=self.high_state, dtype=np.float32)
 
@@ -281,10 +248,25 @@ class ProjectionEnv(gym.Env):
 
         self.done = False
 
+
+        # agent relative positions start, initial state of projection
+        ### it is affine transformed already by these parameters (would like to reach it)
+        ### just for start, then it will be randomized
+        self.rel_row = int(self.rows / 2)
+        self.rel_col = int(self.cols / 2)
+        self.rel_rot = 0
+        self.rel_scale = 1
+
+        # Initialize the agent relative pos ###(rel = relative)
+        self.agent_rel_pos = np.array([self.rel_row, self.rel_col])
+
+
         # Initialize the agent relative pos
         self.agent_rel_pos = np.array([self.rel_row, self.rel_col, self.rel_rot, self.rel_scale])
+
         # Initialize the agent real position        
         self.agent_real_pos = np.array([self.agent_real_row, self.agent_real_col, self.rel_rot, self.rel_scale])
+
 
         # Image with mask virtually projected over "camera" image
         self.merge = sim_projection(self.image.copy(), self.mask_prj.copy(), self.agent_real_pos[0],
@@ -299,7 +281,7 @@ class ProjectionEnv(gym.Env):
         """
         self.state = np.array(
             [self.agent_rel_pos[0], self.agent_rel_pos[1], self.agent_rel_pos[2], self.agent_rel_pos[3],
-             self.contrast[0]])
+             self.contrast])
 
         return self.state
 
@@ -317,7 +299,7 @@ class ProjectionEnv(gym.Env):
             else:
                 bump = True
         elif action == self.DOWN:
-            if self.agent_rel_pos[0] < self.nrows:
+            if self.agent_rel_pos[0] < self.rows:
                 self.agent_rel_pos[0] += 1
                 self.agent_real_pos[0] += 1
             else:
@@ -329,7 +311,7 @@ class ProjectionEnv(gym.Env):
             else:
                 bump = True
         elif action == self.RIGHT:
-            if self.agent_rel_pos[1] < self.ncols:
+            if self.agent_rel_pos[1] < self.cols:
                 self.agent_rel_pos[1] += 1
                 self.agent_real_pos[1] += 1
             else:
@@ -391,7 +373,7 @@ class ProjectionEnv(gym.Env):
                 'rotAG': self.agent_real_pos[2], "scale=": self.agent_real_pos[3]}
 
         state = np.array([self.agent_rel_pos[0], self.agent_rel_pos[1], self.agent_rel_pos[2], self.agent_rel_pos[3],
-                          self.contrast[0]])
+                          self.contrast])
         return state, reward, done, info
 
     def render(self, mode='rgb_array'):
