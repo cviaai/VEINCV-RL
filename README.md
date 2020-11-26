@@ -12,7 +12,7 @@ Peripheral Difficult Venous Access (PDVA) is a commonplace problem in clinical p
 
 Experimental setup            |  RL image adjustment (example)
 :-------------------------:|:-------------------------:
-<img src="https://github.com/cviaai/NIR-VISIBLE-IMAGING-WITH-CNN-RL/blob/master/img/Experimental_setup_scheme.png" width="600"></img> | <img src="https://github.com/cviaai/NIR-VISIBLE-IMAGING-WITH-CNN-RL/blob/master/img/example.gif" width="600"></img>
+<img src="https://github.com/cviaai/NIR-VISIBLE-IMAGING-WITH-CNN-RL/blob/master/img/Experimental_setup_scheme.png" width="600"></img> | <img src="https://github.com/cviaai/NIR-VISIBLE-IMAGING-WITH-CNN-RL/blob/master/img/test_vein_00.gif" width="600"></img>
 
 ## Segmentation pipeline
 ![Segmentation pipeline](https://github.com/cviaai/NIR-VISIBLE-IMAGING-WITH-CNN-RL/blob/master/img/Segmentation_pipeline.png)
