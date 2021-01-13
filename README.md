@@ -82,13 +82,15 @@ Folder ```/server``` - main folder with experiment files
 ## Citing
 If you use this package in your publications or in other work, please cite it as follows:
 ```
-@inproceedings{VeinCV_RL,
-  author={Aleksandr Rubashevskii and Vito M. Leli and Aleksandr Sarachakov and Oleg Y. Rogov and Dmitry V. Dylov},
-  title     = {Near-Infrared-to-Visible Vein Imaging via Convolutional Neural Networks and Reinforcement Learning},
-  booktitle = {16th International Conference on Control, Automation, Robotics and
-               Vision, {ICARCV} 2020, Shenzhen, China, December 13-15},
-  publisher = {{IEEE}},
-  year      = {2020},
+@INPROCEEDINGS{9305503,  
+  author={V. M. {Leli} and A. {Rubashevskii} and A. {Sarachakov} and O. {Rogov} and D. V. {Dylov}},  
+  booktitle={2020 16th International Conference on Control, Automation, Robotics and Vision (ICARCV)},   
+  title={Near-Infrared-to-Visible Vein Imaging via Convolutional Neural Networks and Reinforcement Learning},   
+  year={2020},  
+  volume={},  
+  number={},  
+  pages={434-441},  
+  doi={10.1109/ICARCV50220.2020.9305503}
 }
 ```
 
