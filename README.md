@@ -82,7 +82,7 @@ Folder ```/server``` - main folder with experiment files
 ## Citing
 If you use this package in your publications or in other work, please cite it as follows:
 ```
-@INPROCEEDINGS{9305503,  
+@INPROCEEDINGS{VeinCVNIR,  
   author={V. M. {Leli} and A. {Rubashevskii} and A. {Sarachakov} and O. {Rogov} and D. V. {Dylov}},  
   booktitle={2020 16th International Conference on Control, Automation, Robotics and Vision (ICARCV)},   
   title={Near-Infrared-to-Visible Vein Imaging via Convolutional Neural Networks and Reinforcement Learning},   
