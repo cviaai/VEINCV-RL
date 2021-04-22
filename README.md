@@ -45,7 +45,7 @@ We make our dataset publicly available for other researchers. If you use it in y
 
 To train the models used in the paper, run this command:
 
-```python
+```python3
 python main.py
 ```
 
