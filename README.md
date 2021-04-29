@@ -1,6 +1,7 @@
 [![Python](https://img.shields.io/badge/python-3.6-blue.svg)](https://python.org)
 [![Python](https://img.shields.io/badge/pytorch-1.6.0-red)](https://pytorch.org)
 [![Python](https://img.shields.io/badge/openai%20gym-0.2.3-blue)](https://openai.com/)
+[![Python](https://img.shields.io/badge/paper-published-red)](https://ieeexplore.ieee.org/document/9305503)
 
 # Near-Infrared-to-Visible Vein Imaging via Convolutional Neural Networks and Reinforcement Learning
 
