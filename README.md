@@ -114,8 +114,5 @@ If you use this package in your publications or in other work, please cite it as
 ```https://drive.google.com/file/d/1rYlKY8HwF2c44mFbnY9aWFDyIj_UP48z/view?usp=sharing```
 
 ## Maintainers
-[Aleksandr Rubashevskii](https://github.com/rubaha96)
-
-[Vito Michele Leli](https://github.com/vitomichele)
 
 [Oleg Rogov](https://github.com/olegrgv)
