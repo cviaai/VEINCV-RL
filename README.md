@@ -94,6 +94,21 @@ If you use this package in your publications or in other work, please cite it as
   doi={10.1109/ICARCV50220.2020.9305503}
 }
 ```
+```
+@patent{VCV_Patent,
+  author      = {Dylov, Dmitry V. and Rogov, Oleg Y. and Leli, Vito M. and Sarachakov, Aleksandr Y. and Rubashevskii, Aleksandr  A.},
+  title       = {Noise-resilient vasculature localization method with regularized segmentation},
+  nationality = {United States},
+  number      = {US63045376},
+  day         = {06},
+  month       = {01},
+  year        = {2022},
+  dayfiled    = {29},
+  monthfiled  = {06},
+  yearfiled   = {2020},
+  url         = {https://patents.google.com/patent/WO2022005336A1,
+}
+```
 
 ## Dataset
 ```https://drive.google.com/file/d/1rYlKY8HwF2c44mFbnY9aWFDyIj_UP48z/view?usp=sharing```
