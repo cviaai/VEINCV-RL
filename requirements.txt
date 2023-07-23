@@ -1,6 +1,6 @@
 numpy==1.18.5
 Pillow==9.0.1
-torch==1.6.0+cu101
+torch==1.13.1
 torchvision==0.7.0+cu101
 gpytorch==1.2.0
 pytorch-ignite==0.4.1
